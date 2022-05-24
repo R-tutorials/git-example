@@ -1,4 +1,7 @@
 
 data <- readr::read_csv("data.csv")
 
-plot(happiness ~ work.hours, data = data)
+library(ggplot2)
+
+ggplot(data) +
+  geom_point(aes(work.hours, happiness))
